@@ -60,6 +60,36 @@ namespace Task1_SolvingAQuadraticEquation.Tests
 
             }
         }
+
+        [Test]
+        public void MinDiscriminant()
+        {
+            double[] factors = GetFactors(0.00000000000001);
+
+            QuadraticEquation quadraticEquation = new QuadraticEquation();
+            double a = factors[0];
+            double b = factors[1];
+            double c = factors[2];
+
+            double[] solve = quadraticEquation.Solve(a, b, c);
+
+            Assert.IsNotNull(solve);
+            Assert.AreEqual(solve.Length, 1);
+
+            double expected = solve.First();
+        }
+
+
+        double[] GetFactors(double epsilon)
+        {
+            double a = 1.0;
+            double b = 0.0;
+            double c = 1.0;
+
+            b = Math.Pow((epsilon + 4), 0.5);
+
+            return new double[] { a,b,c};
+        }
     }
-   
+
 }
