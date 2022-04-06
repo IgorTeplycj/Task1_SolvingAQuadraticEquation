@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1_SolvingAQuadraticEquation", "Task1_SolvingAQuadraticEquation\Task1_SolvingAQuadraticEquation.csproj", "{C80EA43A-75C3-4A9C-BB69-34F3A91B24DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1_SolvingAQuadraticEquation.Tests", "Task1_SolvingAQuadraticEquation.Tests\Task1_SolvingAQuadraticEquation.Tests.csproj", "{52775D80-F460-4FD8-90E7-1D99D7CDB343}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C80EA43A-75C3-4A9C-BB69-34F3A91B24DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C80EA43A-75C3-4A9C-BB69-34F3A91B24DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C80EA43A-75C3-4A9C-BB69-34F3A91B24DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C80EA43A-75C3-4A9C-BB69-34F3A91B24DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52775D80-F460-4FD8-90E7-1D99D7CDB343}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52775D80-F460-4FD8-90E7-1D99D7CDB343}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52775D80-F460-4FD8-90E7-1D99D7CDB343}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52775D80-F460-4FD8-90E7-1D99D7CDB343}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82FA93F4-DA07-47D6-B4FE-1348588CE655}
+	EndGlobalSection
+EndGlobal
