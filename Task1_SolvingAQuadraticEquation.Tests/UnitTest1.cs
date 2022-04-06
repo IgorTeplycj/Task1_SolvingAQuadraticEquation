@@ -10,9 +10,16 @@ namespace Task1_SolvingAQuadraticEquation.Tests
         }
 
         [Test]
-        public void Test1()
+        public void NoSolve()
         {
-            Assert.Pass();
+            QuadraticEquation quadraticEquation = new QuadraticEquation();
+            double a = 1;
+            double b = 0;
+            double c = 1;
+
+            double[] solve = quadraticEquation.Solve(a, b, c);
+
+            Assert.IsNull(solve);
         }
     }
 }

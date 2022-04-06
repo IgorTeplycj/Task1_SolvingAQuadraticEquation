@@ -13,4 +13,8 @@
     <PackageReference Include="coverlet.collector" Version="3.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Task1_SolvingAQuadraticEquation\Task1_SolvingAQuadraticEquation.csproj" />
+  </ItemGroup>
+
 </Project>
