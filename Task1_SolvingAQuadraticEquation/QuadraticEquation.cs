@@ -10,7 +10,8 @@ namespace Task1_SolvingAQuadraticEquation
     {
         public double[] Solve(double a, double b, double c)
         {
-
+            if (a.CompareTo(0) == 0)
+                throw new Exception();
 
             double[] toOutput = null;
 
