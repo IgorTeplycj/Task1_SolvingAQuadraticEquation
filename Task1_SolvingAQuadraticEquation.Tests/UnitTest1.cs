@@ -57,7 +57,7 @@ namespace Task1_SolvingAQuadraticEquation.Tests
             }
             catch (Exception ex)
             {
-                Assert.AreEqual(ex, new Exception());
+
             }
         }
     }
