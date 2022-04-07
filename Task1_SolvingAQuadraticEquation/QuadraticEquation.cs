@@ -13,6 +13,15 @@ namespace Task1_SolvingAQuadraticEquation
             if (a.CompareTo(0) == 0)
                 throw new Exception();
 
+            if (Double.IsNaN(a))
+                throw new Exception();
+
+            if (Double.IsNaN(b))
+                throw new Exception();
+
+            if (Double.IsNaN(c))
+                throw new Exception();
+
             double[] toOutput = null;
 
             double D = b * b - 4 * a * c;

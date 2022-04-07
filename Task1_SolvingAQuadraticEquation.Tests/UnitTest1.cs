@@ -79,6 +79,66 @@ namespace Task1_SolvingAQuadraticEquation.Tests
             double expected = solve.First();
         }
 
+        [Test]
+        public void CheckNaNFactorA()
+        {
+            QuadraticEquation quadraticEquation = new QuadraticEquation();
+            double a = double.NaN;
+            double b = 0;
+            double c = 0;
+
+            try
+            {
+                double[] solve = quadraticEquation.Solve(a, b, c);
+
+                Assert.Fail();
+            }
+            catch(Exception ex)
+            {
+
+            }
+        }
+
+        [Test]
+        public void CheckNaNFactorB()
+        {
+            QuadraticEquation quadraticEquation = new QuadraticEquation();
+            double a = 2;
+            double b = Double.NaN;
+            double c = 0;
+
+            try
+            {
+                double[] solve = quadraticEquation.Solve(a, b, c);
+
+                Assert.Fail();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        [Test]
+        public void CheckNaNFactorC()
+        {
+            QuadraticEquation quadraticEquation = new QuadraticEquation();
+            double a = 2;
+            double b = 4;
+            double c = Double.NaN;
+
+            try
+            {
+                double[] solve = quadraticEquation.Solve(a, b, c);
+
+                Assert.Fail();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
 
         double[] GetFactors(double epsilon)
         {
