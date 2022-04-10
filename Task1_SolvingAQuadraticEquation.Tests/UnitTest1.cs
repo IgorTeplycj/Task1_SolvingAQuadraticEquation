@@ -100,11 +100,91 @@ namespace Task1_SolvingAQuadraticEquation.Tests
         }
 
         [Test]
+        public void CheckPosInfFactorA()
+        {
+            QuadraticEquation quadraticEquation = new QuadraticEquation();
+            double a = double.PositiveInfinity;
+            double b = 0;
+            double c = 0;
+
+            try
+            {
+                double[] solve = quadraticEquation.Solve(a, b, c);
+
+                Assert.Fail();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        [Test]
+        public void CheckNegInfFactorA()
+        {
+            QuadraticEquation quadraticEquation = new QuadraticEquation();
+            double a = double.NegativeInfinity;
+            double b = 0;
+            double c = 0;
+
+            try
+            {
+                double[] solve = quadraticEquation.Solve(a, b, c);
+
+                Assert.Fail();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        [Test]
         public void CheckNaNFactorB()
         {
             QuadraticEquation quadraticEquation = new QuadraticEquation();
             double a = 2;
             double b = Double.NaN;
+            double c = 0;
+
+            try
+            {
+                double[] solve = quadraticEquation.Solve(a, b, c);
+
+                Assert.Fail();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        [Test]
+        public void CheckPosInfFactorB()
+        {
+            QuadraticEquation quadraticEquation = new QuadraticEquation();
+            double a = 2;
+            double b = Double.PositiveInfinity;
+            double c = 0;
+
+            try
+            {
+                double[] solve = quadraticEquation.Solve(a, b, c);
+
+                Assert.Fail();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        [Test]
+        public void CheckNegInfFactorB()
+        {
+            QuadraticEquation quadraticEquation = new QuadraticEquation();
+            double a = 2;
+            double b = Double.NegativeInfinity;
             double c = 0;
 
             try
@@ -139,6 +219,45 @@ namespace Task1_SolvingAQuadraticEquation.Tests
             }
         }
 
+        [Test]
+        public void CheckPosInfFactorC()
+        {
+            QuadraticEquation quadraticEquation = new QuadraticEquation();
+            double a = 2;
+            double b = 4;
+            double c = Double.PositiveInfinity;
+
+            try
+            {
+                double[] solve = quadraticEquation.Solve(a, b, c);
+
+                Assert.Fail();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        [Test]
+        public void CheckNegInfFactorC()
+        {
+            QuadraticEquation quadraticEquation = new QuadraticEquation();
+            double a = 2;
+            double b = 4;
+            double c = Double.NegativeInfinity;
+
+            try
+            {
+                double[] solve = quadraticEquation.Solve(a, b, c);
+
+                Assert.Fail();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
 
         double[] GetFactors(double epsilon)
         {
