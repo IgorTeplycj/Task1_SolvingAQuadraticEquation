@@ -8,29 +8,32 @@ namespace Task1_SolvingAQuadraticEquation
 {
     public class QuadraticEquation
     {
+        private double epsilon = Math.Pow(10.0, -10.0);
         public double[] Solve(double a, double b, double c)
         {
-            if (a.CompareTo(0) == 0)
+            if (Math.Abs(a) < epsilon)
                 throw new Exception();
 
-            if (Double.IsNaN(a))
+            if (Double.IsNaN(a) || Double.IsInfinity(a))
                 throw new Exception();
 
-            if (Double.IsNaN(b))
+            if (Double.IsNaN(b) || Double.IsInfinity(b))
                 throw new Exception();
 
-            if (Double.IsNaN(c))
+            if (Double.IsNaN(c) || Double.IsInfinity(c))
                 throw new Exception();
 
             double[] toOutput = null;
 
             double D = b * b - 4 * a * c;
 
-            if (D < 0)
+            //решений нет
+            if (Math.Abs(D) < - epsilon)
             {
                 toOutput = null;
             }
-            else if (D - Math.Pow(10, -10) < Double.Epsilon)
+            //одно решение
+            else if (Math.Abs(D) < epsilon)
             {
                 toOutput = new double[1];
                 toOutput[0] = (double)((double)-1 * b) / (double)((double)2 * a);
