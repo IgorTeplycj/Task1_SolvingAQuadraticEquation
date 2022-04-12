@@ -11,7 +11,7 @@ namespace Task1_SolvingAQuadraticEquation
         private double epsilon = Math.Pow(10.0, -10.0);
         public double[] Solve(double a, double b, double c)
         {
-            if (a < epsilon)
+            if (Math.Abs(a) < epsilon)
                 throw new Exception();
 
             if (Double.IsNaN(a) || Double.IsInfinity(a))
@@ -28,12 +28,12 @@ namespace Task1_SolvingAQuadraticEquation
             double D = b * b - 4 * a * c;
 
             //решений нет
-            if (D < - epsilon)
+            if (Math.Abs(D) < - epsilon)
             {
                 toOutput = null;
             }
             //одно решение
-            else if (D < epsilon)
+            else if (Math.Abs(D) < epsilon)
             {
                 toOutput = new double[1];
                 toOutput[0] = (double)((double)-1 * b) / (double)((double)2 * a);
